@@ -1,0 +1,212 @@
+{
+  "source_file": "data\\raw\\MRBench_V1.json",
+  "paper_reported": {
+    "dialogues": 192,
+    "dialogues_by_source": {
+      "Bridge": 60,
+      "MathDial": 132
+    },
+    "responses": 1596
+  },
+  "release_observed": {
+    "dialogue_objects": 192,
+    "unique_conversation_ids": 188,
+    "dialogues_by_source": {
+      "Bridge": 53,
+      "MathDial": 139
+    },
+    "unique_conversation_ids_by_source": {
+      "Bridge": 49,
+      "MathDial": 139
+    },
+    "response_rows": 1589,
+    "tutor_responses_by_name": {
+      "Expert": 192,
+      "GPT4": 192,
+      "Gemini": 192,
+      "Llama31405B": 192,
+      "Llama318B": 192,
+      "Mistral": 192,
+      "Novice": 53,
+      "Phi3": 192,
+      "Sonnet": 192
+    },
+    "provided_split_dialogues": {
+      "test": 153,
+      "train": 33,
+      "val": 6
+    },
+    "provided_split_by_source": {
+      "test|Bridge": 14,
+      "test|MathDial": 139,
+      "train|Bridge": 33,
+      "val|Bridge": 6
+    },
+    "annotation_rows_by_dimension": {
+      "Mistake_Identification": 1589,
+      "Mistake_Location": 1589,
+      "Revealing_of_the_Answer": 1589,
+      "Providing_Guidance": 1589,
+      "Actionability": 1589,
+      "Coherence": 1589,
+      "Tutor_Tone": 1589,
+      "Humanlikeness": 1589
+    },
+    "label_distribution_including_missing": {
+      "Mistake_Identification": {
+        "Yes": 1271,
+        "No": 226,
+        "To some extent": 92
+      },
+      "Mistake_Location": {
+        "Yes": 1027,
+        "No": 441,
+        "To some extent": 121
+      },
+      "Revealing_of_the_Answer": {
+        "No": 1331,
+        "Yes (and the answer is correct)": 232,
+        "Yes (but the answer is incorrect)": 26
+      },
+      "Providing_Guidance": {
+        "Yes": 930,
+        "To some extent": 366,
+        "No": 293
+      },
+      "Actionability": {
+        "Yes": 873,
+        "No": 524,
+        "To some extent": 192
+      },
+      "Coherence": {
+        "Yes": 1286,
+        "No": 163,
+        "To some extent": 140
+      },
+      "Tutor_Tone": {
+        "Neutral": 1073,
+        "Encouraging": 515,
+        "Offensive": 1
+      },
+      "Humanlikeness": {
+        "Yes": 1405,
+        "To some extent": 96,
+        "No": 88
+      }
+    },
+    "dialogue_ids_unique": false,
+    "duplicate_dialogue_ids": [
+      "411172030",
+      "291616268",
+      "292827169",
+      "413876945"
+    ],
+    "repeated_id_groups": [
+      {
+        "conversation_id": "291616268",
+        "objects": 2,
+        "sources": [
+          "Bridge"
+        ],
+        "provided_splits": [
+          "test",
+          "train"
+        ],
+        "same_history": true,
+        "tutors_with_different_responses": [
+          "Expert",
+          "GPT4",
+          "Gemini",
+          "Llama31405B",
+          "Llama318B",
+          "Mistral",
+          "Novice",
+          "Phi3",
+          "Sonnet"
+        ]
+      },
+      {
+        "conversation_id": "411172030",
+        "objects": 2,
+        "sources": [
+          "Bridge"
+        ],
+        "provided_splits": [
+          "test",
+          "train"
+        ],
+        "same_history": true,
+        "tutors_with_different_responses": [
+          "Expert",
+          "GPT4",
+          "Gemini",
+          "Llama31405B",
+          "Llama318B",
+          "Mistral",
+          "Novice",
+          "Phi3",
+          "Sonnet"
+        ]
+      },
+      {
+        "conversation_id": "413876945",
+        "objects": 2,
+        "sources": [
+          "Bridge"
+        ],
+        "provided_splits": [
+          "test"
+        ],
+        "same_history": true,
+        "tutors_with_different_responses": [
+          "Expert",
+          "GPT4",
+          "Gemini",
+          "Llama31405B",
+          "Llama318B",
+          "Mistral",
+          "Novice",
+          "Phi3",
+          "Sonnet"
+        ]
+      },
+      {
+        "conversation_id": "292827169",
+        "objects": 2,
+        "sources": [
+          "Bridge"
+        ],
+        "provided_splits": [
+          "train",
+          "val"
+        ],
+        "same_history": true,
+        "tutors_with_different_responses": [
+          "Expert",
+          "Gemini",
+          "Llama31405B",
+          "Llama318B",
+          "Mistral",
+          "Novice",
+          "Phi3",
+          "Sonnet"
+        ]
+      }
+    ],
+    "malformed_response_rows": []
+  },
+  "differences_from_paper": {
+    "dialogue_objects": 0,
+    "unique_conversation_ids": -4,
+    "responses": -7,
+    "dialogues_by_source": {
+      "Bridge": -7,
+      "MathDial": 7
+    }
+  },
+  "normalization_notes": [
+    "Raw humanlikeness key is normalized to Humanlikeness.",
+    "Revealing-of-answer variants are mapped to the three paper labels.",
+    "Missing/unknown labels are retained as null and excluded only for that target."
+  ]
+}
