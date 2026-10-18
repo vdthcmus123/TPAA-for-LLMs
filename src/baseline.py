@@ -20,7 +20,8 @@ import pandas as pd
 ROOT = Path(__file__).resolve().parents[1]
 RAW_PATH = ROOT / "data" / "raw" / "MRBench_V1.json"
 PROCESSED_DIR = ROOT / "data" / "processed"
-REPORTS_DIR = ROOT / "reports"
+REPORTS_DIR = ROOT / "reports" / "baseline"
+LOCAL_ARTIFACTS_DIR = ROOT / ".cache" / "local_artifacts"
 
 TARGET_LABELS: dict[str, tuple[str, ...]] = {
     "Mistake_Identification": ("Yes", "To some extent", "No"),
@@ -607,10 +608,10 @@ def run_bert(train: pd.DataFrame, test: pd.DataFrame, args: argparse.Namespace) 
         predictions.extend(_prediction_rows(target, test, y_test, pred))
         print(f"BERT {target}: macro-F1={results[-1]['macro_f1']:.4f}")
     save_results("bert", results, predictions)
-    REPORTS_DIR.mkdir(parents=True, exist_ok=True)
+    LOCAL_ARTIFACTS_DIR.mkdir(parents=True, exist_ok=True)
     torch.save(
         {"state_dict": model.state_dict(), "model_name": args.bert_model, "labels": TARGET_LABELS},
-        REPORTS_DIR / "bert_checkpoint.pt",
+        LOCAL_ARTIFACTS_DIR / "bert_checkpoint.pt",
     )
 
 
