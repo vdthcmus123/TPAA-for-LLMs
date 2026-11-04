@@ -1,6 +1,12 @@
+# Core (baselines, dataset build/audit)
 numpy>=1.26
 pandas>=2.0
 scikit-learn>=1.4
 scipy>=1.9
 torch>=2.2
 transformers>=4.40
+
+# API tutors (scripts/run_api_tutors.py); install only the provider you use
+openai>=1.40        # OpenRouter (OpenAI-compatible)
+# google-genai      # Gemini API direct
+# anthropic         # Claude API direct

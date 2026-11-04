@@ -11,3 +11,11 @@ venv/
 *.safetensors
 mrbench_multimodel_outputs/
 mrbench_all_outputs*.zip
+
+# Local-only folders (not pushed)
+_to_delete/
+course_materials/
+# moLab output folders when unzipped at the repo root
+tpaa_generation_outputs/
+# API keys must stay in environment variables
+*.key

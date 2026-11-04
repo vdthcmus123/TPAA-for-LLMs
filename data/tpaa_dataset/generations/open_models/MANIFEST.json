@@ -1,0 +1,22 @@
+{
+  "format": "tpaa-output-bundle-v1",
+  "created_at_utc": "2026-11-03T12:16:27.829230+00:00",
+  "purpose": "TPAA open-model response generation (resumable checkpoint)",
+  "files": [
+    {
+      "name": "qa_report.csv",
+      "size_bytes": 204676,
+      "sha256": "877c00c022e33e0ab2723b994905d65bda612ee985a6237f6ff9fab354b399cf"
+    },
+    {
+      "name": "tpaa_mrbench_v1.json",
+      "size_bytes": 219501,
+      "sha256": "bd818191f8b38342b3a2b84c6e2180c1677ab48277813fec28b38ac6dd33aafa"
+    },
+    {
+      "name": "tpaa_open_model_responses_v2.csv",
+      "size_bytes": 1642623,
+      "sha256": "6a2a3dbd6a8bad9fe0b69ba967791cc1c1f10a99e1257ece5f43bda0fd31ded7"
+    }
+  ]
+}

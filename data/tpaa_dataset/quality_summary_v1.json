@@ -1,0 +1,125 @@
+{
+  "version": "tpaa-mrbench-v1.0",
+  "conversations": 150,
+  "by_style": {
+    "MathDial": 100,
+    "Bridge": 50
+  },
+  "human_style_responses_included": 200,
+  "expected_responses_after_7_llm_tutors": 1250,
+  "stats_new": {
+    "MathDial": {
+      "conversations": 100,
+      "mean_turns": 5.68,
+      "mean_history_words": 182.4,
+      "median_history_words": 178.5,
+      "last_turn_student_pct": 100.0,
+      "expert_mean_words": 18.0,
+      "expert_question_pct": 70.0,
+      "novice_mean_words": null,
+      "distinct_topics": null,
+      "split": {
+        "val": 10,
+        "train": 70,
+        "test": 20
+      }
+    },
+    "Bridge": {
+      "conversations": 50,
+      "mean_turns": 3.7,
+      "mean_history_words": 23.2,
+      "median_history_words": 22.0,
+      "last_turn_student_pct": 100.0,
+      "expert_mean_words": 14.1,
+      "expert_question_pct": 62.0,
+      "novice_mean_words": 6.0,
+      "distinct_topics": 41,
+      "split": {
+        "train": 35,
+        "val": 5,
+        "test": 10
+      }
+    }
+  },
+  "stats_mrbench_v1": {
+    "MathDial": {
+      "conversations": 139,
+      "mean_turns": 5.53,
+      "mean_history_words": 241.2,
+      "median_history_words": 244,
+      "last_turn_student_pct": 95.7,
+      "expert_mean_words": 18.5,
+      "expert_question_pct": 68.3,
+      "novice_mean_words": null,
+      "distinct_topics": null,
+      "split": {
+        "test": 139
+      }
+    },
+    "Bridge": {
+      "conversations": 53,
+      "mean_turns": 4,
+      "mean_history_words": 25.3,
+      "median_history_words": 24,
+      "last_turn_student_pct": 100.0,
+      "expert_mean_words": 15.2,
+      "expert_question_pct": 52.8,
+      "novice_mean_words": 9,
+      "distinct_topics": 41,
+      "split": {
+        "train": 33,
+        "test": 14,
+        "val": 6
+      }
+    }
+  },
+  "checks": {
+    "schema_matches_mrbench_v1": true,
+    "equations_machine_checked": 544,
+    "ground_truth_equation_errors": 0,
+    "student_equation_errors_total": 2,
+    "student_equation_errors_unintended": 0,
+    "student_answer_equals_truth": 0,
+    "last_turn_not_student": 0,
+    "exact_context_matches_mrbench": 0,
+    "exact_response_matches_mrbench": 0,
+    "context_flags_vs_mrbench_ge_0.60": 0,
+    "context_flags_internal_ge_0.70": 0,
+    "context_flags_vs_gsm8k": "not run (pass --gsm8k)",
+    "response_flags_vs_mrbench_ge_0.80": 0,
+    "max_context_similarity_mrbench": 0.558,
+    "max_context_similarity_internal": 0.694,
+    "most_repeated_mathdial_probe": [
+      [
+        "Can you walk me through your solution?",
+        4
+      ],
+      [
+        "Could you please walk me through your solution?",
+        4
+      ],
+      [
+        "Can you talk me through your solution?",
+        4
+      ]
+    ],
+    "most_repeated_bridge_opener": [
+      [
+        "Let's compare 0.6 and 0.58.",
+        1
+      ],
+      [
+        "Round 4,650 to the nearest hundred.",
+        1
+      ]
+    ],
+    "duplicate_expert_responses": 0
+  },
+  "response_flags": [],
+  "issues": [],
+  "annotation_status": "all 8 dimensions empty; to be labelled by the team",
+  "draft_disposition": {
+    "removed": 150,
+    "rewritten": 34
+  }
+}

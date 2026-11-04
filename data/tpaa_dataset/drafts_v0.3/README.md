@@ -1,5 +1,7 @@
 # Full math tutor dataset draft (D1–D4)
 
+> **Đã được thay thế (11/2026):** bản nháp này đã được rà soát và thay bằng `data/tpaa_dataset/` (150 hội thoại theo đúng định dạng MRBench V1). Xử lý từng mẫu nháp xem `../draft_disposition_v0.3.csv`. Chỉ giữ `dataset_draft.jsonl` vì `scripts/build_tpaa_dataset.py` cần file này để dựng lại dataset; các file CSV trùng nội dung đã được bỏ. Phần mô tả bên dưới là của bản nháp cũ.
+
 This draft contains **184 contexts and 184 tutor-response drafts**, with 46 contexts in each math domain. Each context has one student turn describing a misconception or an attempted answer and one context-specific tutor response draft. The schema follows the project's MRBench-based context and response fields. Revision full-d1-d4-draft-0.3 adds 24 context-response pairs to the previous 160-example set.
 
 ## Domain and grade-band allocation

@@ -1,0 +1,185 @@
+﻿draft_context_id,grade_band,action,reason
+D1-B01-001,pre_k,removed,Outside MRBench scope (paper covers primary/middle-school math)
+D1-B01-002,primary,rewritten,Misconception reused and rewritten into TPAA-MD-039 in MRBench format
+D1-B01-003,primary,rewritten,Misconception reused and rewritten into TPAA-BR-002 in MRBench format
+D1-B01-004,primary,rewritten,Misconception reused and rewritten into TPAA-BR-003 in MRBench format
+D1-B01-005,lower_secondary,rewritten,Misconception reused and rewritten into TPAA-BR-047 in MRBench format
+D1-B01-006,lower_secondary,removed,"2-turn templated context; not converted (MathDial-style needs multi-step word problems, Bridge-style quota filled)"
+D1-B01-007,lower_secondary,removed,"2-turn templated context; not converted (MathDial-style needs multi-step word problems, Bridge-style quota filled)"
+D1-B01-008,upper_secondary,removed,"Upper-secondary topic outside MRBench scope (MathDial middle school, Bridge elementary)"
+D1-B01-009,upper_secondary,removed,"Upper-secondary topic outside MRBench scope (MathDial middle school, Bridge elementary)"
+D1-B01-010,tertiary,removed,Outside MRBench scope (paper covers primary/middle-school math)
+D2-B01-001,pre_k,removed,Outside MRBench scope (paper covers primary/middle-school math)
+D2-B01-002,primary,rewritten,Misconception reused and rewritten into TPAA-BR-004 in MRBench format
+D2-B01-003,primary,removed,"2-turn templated context; not converted (MathDial-style needs multi-step word problems, Bridge-style quota filled)"
+D2-B01-004,primary,removed,"2-turn templated context; not converted (MathDial-style needs multi-step word problems, Bridge-style quota filled)"
+D2-B01-005,lower_secondary,removed,"2-turn templated context; not converted (MathDial-style needs multi-step word problems, Bridge-style quota filled)"
+D2-B01-006,lower_secondary,removed,"2-turn templated context; not converted (MathDial-style needs multi-step word problems, Bridge-style quota filled)"
+D2-B01-007,lower_secondary,removed,"2-turn templated context; not converted (MathDial-style needs multi-step word problems, Bridge-style quota filled)"
+D2-B01-008,upper_secondary,removed,"Upper-secondary topic outside MRBench scope (MathDial middle school, Bridge elementary)"
+D2-B01-009,upper_secondary,removed,"Upper-secondary topic outside MRBench scope (MathDial middle school, Bridge elementary)"
+D2-B01-010,tertiary,removed,Outside MRBench scope (paper covers primary/middle-school math)
+D3-B01-001,pre_k,removed,Outside MRBench scope (paper covers primary/middle-school math)
+D3-B01-002,primary,rewritten,Misconception reused and rewritten into TPAA-BR-038 in MRBench format
+D3-B01-003,primary,removed,"2-turn templated context; not converted (MathDial-style needs multi-step word problems, Bridge-style quota filled)"
+D3-B01-004,primary,rewritten,Misconception reused and rewritten into TPAA-BR-017 in MRBench format
+D3-B01-005,lower_secondary,removed,"2-turn templated context; not converted (MathDial-style needs multi-step word problems, Bridge-style quota filled)"
+D3-B01-006,lower_secondary,rewritten,Misconception reused and rewritten into TPAA-BR-031 in MRBench format
+D3-B01-007,lower_secondary,rewritten,Misconception reused and rewritten into TPAA-MD-095 in MRBench format
+D3-B01-008,upper_secondary,removed,"Upper-secondary topic outside MRBench scope (MathDial middle school, Bridge elementary)"
+D3-B01-009,upper_secondary,removed,"Upper-secondary topic outside MRBench scope (MathDial middle school, Bridge elementary)"
+D3-B01-010,tertiary,removed,Outside MRBench scope (paper covers primary/middle-school math)
+D4-B01-001,pre_k,removed,Outside MRBench scope (paper covers primary/middle-school math)
+D4-B01-002,primary,removed,"2-turn templated context; not converted (MathDial-style needs multi-step word problems, Bridge-style quota filled)"
+D4-B01-003,primary,removed,"2-turn templated context; not converted (MathDial-style needs multi-step word problems, Bridge-style quota filled)"
+D4-B01-004,primary,removed,"2-turn templated context; not converted (MathDial-style needs multi-step word problems, Bridge-style quota filled)"
+D4-B01-005,lower_secondary,removed,"2-turn templated context; not converted (MathDial-style needs multi-step word problems, Bridge-style quota filled)"
+D4-B01-006,lower_secondary,rewritten,Misconception reused and rewritten into TPAA-MD-090 in MRBench format
+D4-B01-007,lower_secondary,removed,"2-turn templated context; not converted (MathDial-style needs multi-step word problems, Bridge-style quota filled)"
+D4-B01-008,upper_secondary,removed,"Upper-secondary topic outside MRBench scope (MathDial middle school, Bridge elementary)"
+D4-B01-009,upper_secondary,removed,"Upper-secondary topic outside MRBench scope (MathDial middle school, Bridge elementary)"
+D4-B01-010,tertiary,removed,Outside MRBench scope (paper covers primary/middle-school math)
+D1-B01-011,pre_k,removed,Outside MRBench scope (paper covers primary/middle-school math)
+D1-B01-012,pre_k,removed,Outside MRBench scope (paper covers primary/middle-school math)
+D1-B01-013,pre_k,removed,Outside MRBench scope (paper covers primary/middle-school math)
+D1-B01-014,primary,rewritten,Misconception reused and rewritten into TPAA-BR-001 in MRBench format
+D1-B01-015,primary,removed,"2-turn templated context; not converted (MathDial-style needs multi-step word problems, Bridge-style quota filled)"
+D1-B01-016,primary,rewritten,Misconception reused and rewritten into TPAA-BR-030 in MRBench format
+D1-B01-017,primary,rewritten,Misconception reused and rewritten into TPAA-BR-028 in MRBench format
+D1-B01-018,primary,removed,"2-turn templated context; not converted (MathDial-style needs multi-step word problems, Bridge-style quota filled)"
+D1-B01-019,primary,removed,"2-turn templated context; not converted (MathDial-style needs multi-step word problems, Bridge-style quota filled)"
+D1-B01-020,primary,rewritten,Misconception reused and rewritten into TPAA-BR-009 in MRBench format
+D1-B01-021,primary,rewritten,Misconception reused and rewritten into TPAA-BR-011 in MRBench format
+D1-B01-022,lower_secondary,removed,"2-turn templated context; not converted (MathDial-style needs multi-step word problems, Bridge-style quota filled)"
+D1-B01-023,lower_secondary,removed,"2-turn templated context; not converted (MathDial-style needs multi-step word problems, Bridge-style quota filled)"
+D1-B01-024,lower_secondary,removed,"2-turn templated context; not converted (MathDial-style needs multi-step word problems, Bridge-style quota filled)"
+D1-B01-025,lower_secondary,rewritten,Misconception reused and rewritten into TPAA-MD-069 in MRBench format
+D1-B01-026,lower_secondary,removed,"2-turn templated context; not converted (MathDial-style needs multi-step word problems, Bridge-style quota filled)"
+D1-B01-027,lower_secondary,removed,"2-turn templated context; not converted (MathDial-style needs multi-step word problems, Bridge-style quota filled)"
+D1-B01-028,lower_secondary,rewritten,Misconception reused and rewritten into TPAA-MD-055 in MRBench format
+D1-B01-029,lower_secondary,rewritten,Misconception reused and rewritten into TPAA-MD-065 in MRBench format
+D1-B01-030,upper_secondary,removed,"Upper-secondary topic outside MRBench scope (MathDial middle school, Bridge elementary)"
+D1-B01-031,upper_secondary,removed,"Upper-secondary topic outside MRBench scope (MathDial middle school, Bridge elementary)"
+D1-B01-032,upper_secondary,removed,"Upper-secondary topic outside MRBench scope (MathDial middle school, Bridge elementary)"
+D1-B01-033,upper_secondary,removed,"Upper-secondary topic outside MRBench scope (MathDial middle school, Bridge elementary)"
+D1-B01-034,upper_secondary,removed,"Upper-secondary topic outside MRBench scope (MathDial middle school, Bridge elementary)"
+D1-B01-035,tertiary,removed,Outside MRBench scope (paper covers primary/middle-school math)
+D1-B01-036,tertiary,removed,Outside MRBench scope (paper covers primary/middle-school math)
+D1-B01-037,tertiary,removed,Outside MRBench scope (paper covers primary/middle-school math)
+D2-B01-011,pre_k,removed,Outside MRBench scope (paper covers primary/middle-school math)
+D2-B01-012,pre_k,removed,Outside MRBench scope (paper covers primary/middle-school math)
+D2-B01-013,pre_k,removed,Outside MRBench scope (paper covers primary/middle-school math)
+D2-B01-014,primary,rewritten,Misconception reused and rewritten into TPAA-BR-016 in MRBench format
+D2-B01-015,primary,removed,"2-turn templated context; not converted (MathDial-style needs multi-step word problems, Bridge-style quota filled)"
+D2-B01-016,primary,rewritten,Misconception reused and rewritten into TPAA-BR-045 in MRBench format
+D2-B01-017,primary,removed,"2-turn templated context; not converted (MathDial-style needs multi-step word problems, Bridge-style quota filled)"
+D2-B01-018,primary,removed,"2-turn templated context; not converted (MathDial-style needs multi-step word problems, Bridge-style quota filled)"
+D2-B01-019,lower_secondary,removed,"2-turn templated context; not converted (MathDial-style needs multi-step word problems, Bridge-style quota filled)"
+D2-B01-020,lower_secondary,removed,"2-turn templated context; not converted (MathDial-style needs multi-step word problems, Bridge-style quota filled)"
+D2-B01-021,lower_secondary,removed,"2-turn templated context; not converted (MathDial-style needs multi-step word problems, Bridge-style quota filled)"
+D2-B01-022,lower_secondary,removed,"2-turn templated context; not converted (MathDial-style needs multi-step word problems, Bridge-style quota filled)"
+D2-B01-023,lower_secondary,removed,"2-turn templated context; not converted (MathDial-style needs multi-step word problems, Bridge-style quota filled)"
+D2-B01-024,lower_secondary,removed,"2-turn templated context; not converted (MathDial-style needs multi-step word problems, Bridge-style quota filled)"
+D2-B01-025,lower_secondary,removed,"2-turn templated context; not converted (MathDial-style needs multi-step word problems, Bridge-style quota filled)"
+D2-B01-026,upper_secondary,removed,"Upper-secondary topic outside MRBench scope (MathDial middle school, Bridge elementary)"
+D2-B01-027,upper_secondary,removed,"Upper-secondary topic outside MRBench scope (MathDial middle school, Bridge elementary)"
+D2-B01-028,upper_secondary,removed,"Upper-secondary topic outside MRBench scope (MathDial middle school, Bridge elementary)"
+D2-B01-029,upper_secondary,removed,"Upper-secondary topic outside MRBench scope (MathDial middle school, Bridge elementary)"
+D2-B01-030,upper_secondary,removed,"Upper-secondary topic outside MRBench scope (MathDial middle school, Bridge elementary)"
+D2-B01-031,tertiary,removed,Outside MRBench scope (paper covers primary/middle-school math)
+D2-B01-032,tertiary,removed,Outside MRBench scope (paper covers primary/middle-school math)
+D2-B01-033,tertiary,removed,Outside MRBench scope (paper covers primary/middle-school math)
+D2-B01-034,primary,removed,"2-turn templated context; not converted (MathDial-style needs multi-step word problems, Bridge-style quota filled)"
+D2-B01-035,primary,removed,"2-turn templated context; not converted (MathDial-style needs multi-step word problems, Bridge-style quota filled)"
+D2-B01-036,upper_secondary,removed,"Upper-secondary topic outside MRBench scope (MathDial middle school, Bridge elementary)"
+D2-B01-037,primary,rewritten,Misconception reused and rewritten into TPAA-BR-022 in MRBench format
+D2-B01-038,primary,removed,"2-turn templated context; not converted (MathDial-style needs multi-step word problems, Bridge-style quota filled)"
+D2-B01-039,lower_secondary,removed,"2-turn templated context; not converted (MathDial-style needs multi-step word problems, Bridge-style quota filled)"
+D2-B01-040,lower_secondary,removed,"2-turn templated context; not converted (MathDial-style needs multi-step word problems, Bridge-style quota filled)"
+D3-B01-011,pre_k,removed,Outside MRBench scope (paper covers primary/middle-school math)
+D3-B01-012,pre_k,removed,Outside MRBench scope (paper covers primary/middle-school math)
+D3-B01-013,pre_k,removed,Outside MRBench scope (paper covers primary/middle-school math)
+D3-B01-014,primary,removed,"2-turn templated context; not converted (MathDial-style needs multi-step word problems, Bridge-style quota filled)"
+D3-B01-015,primary,rewritten,Misconception reused and rewritten into TPAA-BR-005 in MRBench format
+D3-B01-016,primary,removed,"2-turn templated context; not converted (MathDial-style needs multi-step word problems, Bridge-style quota filled)"
+D3-B01-017,primary,removed,"2-turn templated context; not converted (MathDial-style needs multi-step word problems, Bridge-style quota filled)"
+D3-B01-018,primary,rewritten,Misconception reused and rewritten into TPAA-BR-013 in MRBench format
+D3-B01-019,primary,rewritten,Misconception reused and rewritten into TPAA-BR-006 in MRBench format
+D3-B01-020,primary,removed,"2-turn templated context; not converted (MathDial-style needs multi-step word problems, Bridge-style quota filled)"
+D3-B01-021,primary,rewritten,Misconception reused and rewritten into TPAA-MD-077 in MRBench format
+D3-B01-022,lower_secondary,removed,"2-turn templated context; not converted (MathDial-style needs multi-step word problems, Bridge-style quota filled)"
+D3-B01-023,lower_secondary,removed,"2-turn templated context; not converted (MathDial-style needs multi-step word problems, Bridge-style quota filled)"
+D3-B01-024,lower_secondary,removed,"2-turn templated context; not converted (MathDial-style needs multi-step word problems, Bridge-style quota filled)"
+D3-B01-025,lower_secondary,removed,"2-turn templated context; not converted (MathDial-style needs multi-step word problems, Bridge-style quota filled)"
+D3-B01-026,lower_secondary,removed,"2-turn templated context; not converted (MathDial-style needs multi-step word problems, Bridge-style quota filled)"
+D3-B01-027,lower_secondary,rewritten,Misconception reused and rewritten into TPAA-MD-071 in MRBench format
+D3-B01-028,lower_secondary,removed,"2-turn templated context; not converted (MathDial-style needs multi-step word problems, Bridge-style quota filled)"
+D3-B01-029,lower_secondary,rewritten,Misconception reused and rewritten into TPAA-MD-092 in MRBench format
+D3-B01-030,lower_secondary,removed,"2-turn templated context; not converted (MathDial-style needs multi-step word problems, Bridge-style quota filled)"
+D3-B01-031,upper_secondary,removed,"Upper-secondary topic outside MRBench scope (MathDial middle school, Bridge elementary)"
+D3-B01-032,upper_secondary,removed,"Upper-secondary topic outside MRBench scope (MathDial middle school, Bridge elementary)"
+D3-B01-033,upper_secondary,removed,"Upper-secondary topic outside MRBench scope (MathDial middle school, Bridge elementary)"
+D3-B01-034,upper_secondary,removed,"Upper-secondary topic outside MRBench scope (MathDial middle school, Bridge elementary)"
+D3-B01-035,upper_secondary,removed,"Upper-secondary topic outside MRBench scope (MathDial middle school, Bridge elementary)"
+D3-B01-036,upper_secondary,removed,"Upper-secondary topic outside MRBench scope (MathDial middle school, Bridge elementary)"
+D3-B01-037,tertiary,removed,Outside MRBench scope (paper covers primary/middle-school math)
+D3-B01-038,tertiary,removed,Outside MRBench scope (paper covers primary/middle-school math)
+D3-B01-039,tertiary,removed,Outside MRBench scope (paper covers primary/middle-school math)
+D4-B01-011,pre_k,removed,Outside MRBench scope (paper covers primary/middle-school math)
+D4-B01-012,pre_k,removed,Outside MRBench scope (paper covers primary/middle-school math)
+D4-B01-013,pre_k,removed,Outside MRBench scope (paper covers primary/middle-school math)
+D4-B01-014,primary,rewritten,Misconception reused and rewritten into TPAA-BR-008 in MRBench format
+D4-B01-015,primary,removed,"2-turn templated context; not converted (MathDial-style needs multi-step word problems, Bridge-style quota filled)"
+D4-B01-016,primary,removed,"2-turn templated context; not converted (MathDial-style needs multi-step word problems, Bridge-style quota filled)"
+D4-B01-017,primary,removed,"2-turn templated context; not converted (MathDial-style needs multi-step word problems, Bridge-style quota filled)"
+D4-B01-018,primary,removed,"2-turn templated context; not converted (MathDial-style needs multi-step word problems, Bridge-style quota filled)"
+D4-B01-019,primary,removed,"2-turn templated context; not converted (MathDial-style needs multi-step word problems, Bridge-style quota filled)"
+D4-B01-020,primary,removed,"2-turn templated context; not converted (MathDial-style needs multi-step word problems, Bridge-style quota filled)"
+D4-B01-021,lower_secondary,removed,"2-turn templated context; not converted (MathDial-style needs multi-step word problems, Bridge-style quota filled)"
+D4-B01-022,lower_secondary,removed,"2-turn templated context; not converted (MathDial-style needs multi-step word problems, Bridge-style quota filled)"
+D4-B01-023,lower_secondary,removed,"2-turn templated context; not converted (MathDial-style needs multi-step word problems, Bridge-style quota filled)"
+D4-B01-024,lower_secondary,removed,"2-turn templated context; not converted (MathDial-style needs multi-step word problems, Bridge-style quota filled)"
+D4-B01-025,lower_secondary,rewritten,Misconception reused and rewritten into TPAA-MD-089 in MRBench format
+D4-B01-026,lower_secondary,removed,"2-turn templated context; not converted (MathDial-style needs multi-step word problems, Bridge-style quota filled)"
+D4-B01-027,lower_secondary,removed,"2-turn templated context; not converted (MathDial-style needs multi-step word problems, Bridge-style quota filled)"
+D4-B01-028,lower_secondary,removed,"2-turn templated context; not converted (MathDial-style needs multi-step word problems, Bridge-style quota filled)"
+D4-B01-029,lower_secondary,removed,"2-turn templated context; not converted (MathDial-style needs multi-step word problems, Bridge-style quota filled)"
+D4-B01-030,upper_secondary,removed,"Upper-secondary topic outside MRBench scope (MathDial middle school, Bridge elementary)"
+D4-B01-031,upper_secondary,removed,"Upper-secondary topic outside MRBench scope (MathDial middle school, Bridge elementary)"
+D4-B01-032,upper_secondary,removed,"Upper-secondary topic outside MRBench scope (MathDial middle school, Bridge elementary)"
+D4-B01-033,upper_secondary,removed,"Upper-secondary topic outside MRBench scope (MathDial middle school, Bridge elementary)"
+D4-B01-034,upper_secondary,removed,"Upper-secondary topic outside MRBench scope (MathDial middle school, Bridge elementary)"
+D4-B01-035,upper_secondary,removed,"Upper-secondary topic outside MRBench scope (MathDial middle school, Bridge elementary)"
+D4-B01-036,tertiary,removed,Outside MRBench scope (paper covers primary/middle-school math)
+D4-B01-037,tertiary,removed,Outside MRBench scope (paper covers primary/middle-school math)
+D4-B01-038,tertiary,removed,Outside MRBench scope (paper covers primary/middle-school math)
+D1-B01-038,primary,rewritten,Misconception reused and rewritten into TPAA-BR-039 in MRBench format
+D1-B01-039,lower_secondary,removed,"2-turn templated context; not converted (MathDial-style needs multi-step word problems, Bridge-style quota filled)"
+D1-B01-040,upper_secondary,removed,"Upper-secondary topic outside MRBench scope (MathDial middle school, Bridge elementary)"
+D3-B01-040,primary,rewritten,Misconception reused and rewritten into TPAA-BR-007 in MRBench format
+D4-B01-039,primary,rewritten,Misconception reused and rewritten into TPAA-BR-035 in MRBench format
+D4-B01-040,primary,removed,"2-turn templated context; not converted (MathDial-style needs multi-step word problems, Bridge-style quota filled)"
+D1-B01-041,primary,removed,"2-turn templated context; not converted (MathDial-style needs multi-step word problems, Bridge-style quota filled)"
+D1-B01-042,primary,rewritten,Misconception reused and rewritten into TPAA-BR-014 in MRBench format
+D1-B01-043,lower_secondary,removed,"2-turn templated context; not converted (MathDial-style needs multi-step word problems, Bridge-style quota filled)"
+D1-B01-044,lower_secondary,rewritten,Misconception reused and rewritten into TPAA-BR-021 in MRBench format
+D1-B01-045,upper_secondary,removed,"Upper-secondary topic outside MRBench scope (MathDial middle school, Bridge elementary)"
+D1-B01-046,tertiary,removed,Outside MRBench scope (paper covers primary/middle-school math)
+D2-B01-041,upper_secondary,removed,"Upper-secondary topic outside MRBench scope (MathDial middle school, Bridge elementary)"
+D2-B01-042,lower_secondary,removed,"2-turn templated context; not converted (MathDial-style needs multi-step word problems, Bridge-style quota filled)"
+D2-B01-043,upper_secondary,removed,"Upper-secondary topic outside MRBench scope (MathDial middle school, Bridge elementary)"
+D2-B01-044,upper_secondary,removed,"Upper-secondary topic outside MRBench scope (MathDial middle school, Bridge elementary)"
+D2-B01-045,tertiary,removed,Outside MRBench scope (paper covers primary/middle-school math)
+D2-B01-046,tertiary,removed,Outside MRBench scope (paper covers primary/middle-school math)
+D3-B01-041,pre_k,removed,Outside MRBench scope (paper covers primary/middle-school math)
+D3-B01-042,primary,removed,"2-turn templated context; not converted (MathDial-style needs multi-step word problems, Bridge-style quota filled)"
+D3-B01-043,lower_secondary,removed,"2-turn templated context; not converted (MathDial-style needs multi-step word problems, Bridge-style quota filled)"
+D3-B01-044,lower_secondary,removed,"2-turn templated context; not converted (MathDial-style needs multi-step word problems, Bridge-style quota filled)"
+D3-B01-045,lower_secondary,removed,"2-turn templated context; not converted (MathDial-style needs multi-step word problems, Bridge-style quota filled)"
+D3-B01-046,tertiary,removed,Outside MRBench scope (paper covers primary/middle-school math)
+D4-B01-041,pre_k,removed,Outside MRBench scope (paper covers primary/middle-school math)
+D4-B01-042,primary,removed,"2-turn templated context; not converted (MathDial-style needs multi-step word problems, Bridge-style quota filled)"
+D4-B01-043,lower_secondary,removed,"2-turn templated context; not converted (MathDial-style needs multi-step word problems, Bridge-style quota filled)"
+D4-B01-044,lower_secondary,removed,"2-turn templated context; not converted (MathDial-style needs multi-step word problems, Bridge-style quota filled)"
+D4-B01-045,upper_secondary,removed,"Upper-secondary topic outside MRBench scope (MathDial middle school, Bridge elementary)"
+D4-B01-046,tertiary,removed,Outside MRBench scope (paper covers primary/middle-school math)

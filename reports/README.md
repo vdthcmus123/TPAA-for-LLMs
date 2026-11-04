@@ -7,5 +7,9 @@
 - [`baseline/`](baseline/): normalized MRBench audit, fixed split manifest,
   per-dimension metrics, test predictions, and baseline summary.
 
-Large model checkpoints and the raw moLab output ZIP are intentionally kept
-outside Git. The report stores the input ZIP SHA-256 for provenance.
+- [`mrbench_molab_outputs.zip`](mrbench_molab_outputs.zip): moLab output bundle of
+  the MRBench run (960 generated responses, 2,549 Qwen judgements). Regenerate the
+  report with `python scripts/generate_benchmark_report.py --bundle reports/mrbench_molab_outputs.zip`.
+
+Large model checkpoints stay outside Git. The report stores the input ZIP SHA-256
+for provenance.

@@ -1,0 +1,151 @@
+﻿conversation_id,style,split,topic,ground_truth_answer,student_answer,misconception,intended_arithmetic_slip,derived_from_draft,n_turns,history_words,expert_words,has_novice,equations_checked
+TPAA-MD-001,MathDial,val,,7,10,Ignores a quantity removed before equal sharing.,False,,6,244,18,False,6
+TPAA-MD-002,MathDial,train,,4,3,Rounds down a quotient when the context requires rounding up.,False,,4,157,15,False,4
+TPAA-MD-003,MathDial,train,,13,12,Off-by-one: counts gaps instead of posts.,False,,6,206,18,False,3
+TPAA-MD-004,MathDial,test,,80,82.50,Applies two price changes in the wrong order.,False,,6,226,17,False,6
+TPAA-MD-005,MathDial,test,,83,65,Uses the wrong reference quantity in a comparison.,False,,4,198,8,False,6
+TPAA-MD-006,MathDial,train,,36,26,Adds opposing rates instead of finding the net rate.,False,,6,218,20,False,4
+TPAA-MD-007,MathDial,train,,12,15,Accounts for elapsed time for only one person in a sum of ages.,False,,6,269,20,False,7
+TPAA-MD-008,MathDial,train,,190,238,Ignores the cost of unsold items when computing profit.,False,,4,169,12,False,7
+TPAA-MD-009,MathDial,train,,9:30 p.m.,8:50 p.m.,Treats a minute count as if its digits were hours and minutes.,False,,6,172,14,False,2
+TPAA-MD-010,MathDial,train,,30,25,Takes a fraction of the original amount instead of the remaining amount.,False,,6,184,19,False,7
+TPAA-MD-011,MathDial,train,,40.50,112.50,Divides by the wrong quantity in a rate (ignores the 'per 100 km').,False,,4,151,20,False,5
+TPAA-MD-012,MathDial,test,,97,91,Compensates an average shortfall only once instead of for every score.,False,,6,258,29,False,8
+TPAA-MD-013,MathDial,train,,10,5,Drops a multiplier stated in the question (two coats).,False,,4,208,11,False,7
+TPAA-MD-014,MathDial,test,,14,28,Divides the total by the difference in parts rather than the total parts.,False,,6,178,24,False,7
+TPAA-MD-015,MathDial,test,,784,745,Applies a multiplier to the hours instead of the hourly rate.,False,,4,169,14,False,9
+TPAA-MD-016,MathDial,train,,6,0.75,Confuses the decimal part of a quotient with the remainder.,False,,6,216,18,False,6
+TPAA-MD-017,MathDial,train,,44,21,Adds a border width to only one side of each dimension.,False,,6,273,24,False,10
+TPAA-MD-018,MathDial,test,,14,18,Ignores a starting amount.,False,,4,172,12,False,3
+TPAA-MD-019,MathDial,train,,0.05,0.12,Uses a marginal price instead of the unit price of the whole pack.,False,,6,208,20,False,8
+TPAA-MD-020,MathDial,train,,245,211,Writes minutes directly after the decimal point when converting to hours.,False,,6,185,15,False,7
+TPAA-MD-021,MathDial,train,,69,67.50,Applies a bulk price to a fractional bundle that cannot be bought.,False,,4,161,20,False,9
+TPAA-MD-022,MathDial,train,,5.5,55,Misplaces the decimal point after scaling both numbers in a division.,True,,6,212,21,False,6
+TPAA-MD-023,MathDial,train,,10,6,Applies the second condition to the wrong group.,False,,4,158,14,False,5
+TPAA-MD-024,MathDial,train,,120,30,Uses a per-week quantity as the total for several weeks.,False,,6,171,12,False,7
+TPAA-MD-025,MathDial,train,,39,59,Charges all units instead of only those above a threshold.,False,,6,161,17,False,5
+TPAA-MD-026,MathDial,val,,5,4,Approximates a scale factor instead of scaling exactly.,False,,6,169,14,False,4
+TPAA-MD-027,MathDial,train,,105,75,Adds percentages that have different bases.,False,,4,199,21,False,6
+TPAA-MD-028,MathDial,test,,44,42,Omits one group mentioned in the problem.,False,,4,172,12,False,6
+TPAA-MD-029,MathDial,test,,2,18,Uses a catch-up (difference) model for objects moving toward each other.,False,,6,191,22,False,4
+TPAA-MD-030,MathDial,test,,30,4320,Multiplies by a rate instead of dividing by it.,False,,6,190,20,False,5
+TPAA-MD-031,MathDial,train,,150,45,Divides an area by a length.,False,,6,183,19,False,5
+TPAA-MD-032,MathDial,test,,6,7,Uses a unit price as a group total.,False,,6,157,13,False,5
+TPAA-MD-033,MathDial,train,,3.75,0.75,Subtracts clock numbers across a.m./p.m. as if on one 12-hour cycle.,False,,6,209,19,False,5
+TPAA-MD-034,MathDial,train,,25,33,Uses the new value as the base for a percent change.,False,,6,150,15,False,4
+TPAA-MD-035,MathDial,train,,12,60,Treats a rate for a group as a rate per item.,False,,6,160,19,False,5
+TPAA-MD-036,MathDial,test,,144,145,Averages group means without weighting by group size.,False,,6,173,23,False,6
+TPAA-MD-037,MathDial,train,,2,4.5,Averages times instead of adding work rates.,False,,6,171,14,False,2
+TPAA-MD-038,MathDial,train,,10.20,2.20,Reverses a multiplicative comparison.,False,,6,179,14,False,8
+TPAA-MD-039,MathDial,train,,12,26,Misplaces the decimal point when multiplying a decimal by a whole number.,True,D1-B01-002,4,167,18,False,6
+TPAA-MD-040,MathDial,train,,15,13.8,Writes minutes directly after the decimal point when converting to hours.,False,,6,155,24,False,4
+TPAA-MD-041,MathDial,train,,46.20,46,Adds successive percentages that apply to different bases.,False,,6,198,19,False,6
+TPAA-MD-042,MathDial,train,,108,126,Off-by-one: counts floors instead of intervals between floors.,False,,6,157,19,False,3
+TPAA-MD-043,MathDial,train,,8,13.33,Reads a part-to-part ratio as a part-to-whole fraction.,False,,6,183,18,False,4
+TPAA-MD-044,MathDial,train,,24,32,Takes a fraction of the total instead of the remainder.,False,,4,147,10,False,5
+TPAA-MD-045,MathDial,train,,130,140,Applies a bundle price to items that are not part of a bundle.,False,,6,183,11,False,5
+TPAA-MD-046,MathDial,train,,8100,1350,Treats a per-10-minute rate as a per-hour rate.,False,,6,143,16,False,6
+TPAA-MD-047,MathDial,train,,216,264,Subtracts quantities with different units.,False,,6,169,16,False,8
+TPAA-MD-048,MathDial,train,,-2,6,Ignores the sign of a negative starting value.,False,,6,166,26,False,4
+TPAA-MD-049,MathDial,train,,11.15,15.85,Uses a unit price instead of the cost of several items.,False,,4,150,23,False,5
+TPAA-MD-050,MathDial,train,,54,27,Computes half the perimeter.,False,,6,178,18,False,4
+TPAA-MD-051,MathDial,train,,66,6,Uses the wrong metric conversion factor.,False,,6,221,16,False,6
+TPAA-MD-052,MathDial,train,,2,1.75,Off-by-one: subtracts dates when an inclusive count is required.,False,,6,196,25,False,6
+TPAA-MD-053,MathDial,train,,17.5,22.5,Applies a fraction to the wrong whole.,False,,6,182,22,False,6
+TPAA-MD-054,MathDial,val,,18,30,Reverses an additive comparison ('more than').,False,,6,177,15,False,4
+TPAA-MD-055,MathDial,test,,8:36 a.m.,8:30 a.m.,Adds cycle lengths instead of finding a common multiple.,False,D1-B01-028,6,177,14,False,1
+TPAA-MD-056,MathDial,train,,8820,8800,Adds successive percentage growth instead of compounding.,False,,6,192,19,False,5
+TPAA-MD-057,MathDial,train,,3,5,Misinterprets a division remainder in context.,False,,6,178,11,False,6
+TPAA-MD-058,MathDial,val,,60,59,"Rounds an intermediate rate too early, so the final answer drifts.",False,,6,193,20,False,5
+TPAA-MD-059,MathDial,train,,68,70,Off-by-one in the nth term of an arithmetic sequence.,False,,6,185,23,False,7
+TPAA-MD-060,MathDial,train,,60,50,Shares equally when the problem requires proportional sharing.,False,,6,149,24,False,4
+TPAA-MD-061,MathDial,train,,100,33,Reads the decimal part of a quotient as the leftover quantity.,False,,6,160,13,False,6
+TPAA-MD-062,MathDial,train,,2,1,Rounds a quotient to the nearest whole number when a capacity limit requires rounding up.,False,,6,180,17,False,7
+TPAA-MD-063,MathDial,train,,45,43,Divides a total by the multiplier instead of by the total number of parts.,False,,6,170,31,False,5
+TPAA-MD-064,MathDial,train,,47.5,56,Double counts a category (Saturday counted as a weekday and separately).,False,,6,221,23,False,4
+TPAA-MD-065,MathDial,test,,896,899.89,Confuses simple and compound interest.,False,D1-B01-029,6,164,25,False,6
+TPAA-MD-066,MathDial,train,,38,40,Does not consider mixed purchase options when minimising cost.,False,,6,211,13,False,8
+TPAA-MD-067,MathDial,train,,669,537,Uses perimeter where area is required.,False,,6,173,25,False,6
+TPAA-MD-068,MathDial,train,,48,50,Averages speeds instead of using total distance over total time.,False,,6,169,20,False,8
+TPAA-MD-069,MathDial,train,,1.20,-2.40,Compares package prices without equalising quantities.,False,D1-B01-025,6,180,23,False,6
+TPAA-MD-070,MathDial,test,,10,40,Applies a fraction of a subset to the whole set.,False,,6,198,21,False,6
+TPAA-MD-071,MathDial,train,,3,-1,Subtracts side lengths instead of using the Pythagorean theorem.,False,D3-B01-027,6,190,14,False,4
+TPAA-MD-072,MathDial,val,,63,45,Misreads a 'buy 2 get 1' group size.,False,,6,194,21,False,5
+TPAA-MD-073,MathDial,train,,36,21.6,Converts minutes to hours by dividing by 100.,False,,6,142,14,False,3
+TPAA-MD-074,MathDial,train,,5,0,Double counts the overlap of two sets.,False,,6,180,25,False,4
+TPAA-MD-075,MathDial,train,,1.875,2,Adds the scale fraction itself instead of scaling the quantity.,False,,6,155,16,False,3
+TPAA-MD-076,MathDial,test,,11500,41.40,Takes a percent of the part instead of working back to the whole.,False,,6,156,19,False,4
+TPAA-MD-077,MathDial,train,,4.375,8.75,Misreads a map scale with a non-unit numerator.,False,D3-B01-021,6,163,20,False,5
+TPAA-MD-078,MathDial,val,,11,9,Ignores a 'part of an hour counts as an hour' rule.,False,,6,181,19,False,3
+TPAA-MD-079,MathDial,train,,50,200,Compares totals of unequal groups instead of unit amounts.,False,,6,190,16,False,5
+TPAA-MD-080,MathDial,train,,63,67,Subtracts a length from a volume.,False,,6,174,14,False,6
+TPAA-MD-081,MathDial,train,,75,23,Off-by-one in the nth term and confuses one term with the total.,False,,6,206,24,False,6
+TPAA-MD-082,MathDial,test,,38,48,Applies a tiered rate to the whole quantity.,False,,6,169,11,False,5
+TPAA-MD-083,MathDial,train,,25,15,Uses an unweighted average of two groups of different sizes.,False,,4,196,24,False,8
+TPAA-MD-084,MathDial,train,,705,525,Misreads the direction of a change.,False,,6,158,13,False,6
+TPAA-MD-085,MathDial,val,,200,112.5,Inverts a scale factor in a proportional (work-time) relationship.,False,,6,153,12,False,6
+TPAA-MD-086,MathDial,train,,10,1.4,Multiplies by the divisor instead of its reciprocal.,False,,6,140,16,False,2
+TPAA-MD-087,MathDial,test,,26.40,44,Adds a whole share to each person instead of dividing it among them.,False,,6,192,24,False,6
+TPAA-MD-088,MathDial,train,,20.25,10.13,Omits the return leg of a round trip.,False,,4,195,14,False,7
+TPAA-MD-089,MathDial,test,,0.2,0.17,Updates the favourable count but not the total after removal.,False,D4-B01-025,6,173,19,False,7
+TPAA-MD-090,MathDial,val,,29,45,Takes the middle value of an unsorted list.,False,D4-B01-006,6,153,17,False,0
+TPAA-MD-091,MathDial,train,,300,1650,Compares amounts measured over different time periods.,False,,6,176,19,False,5
+TPAA-MD-092,MathDial,train,,2,7,Uses volume where surface area is required.,False,D3-B01-029,6,190,25,False,7
+TPAA-MD-093,MathDial,train,,15,40,Checks a condition only at the end instead of at every step.,False,,6,218,12,False,6
+TPAA-MD-094,MathDial,val,,28,16.40,Treats a per-person cost as a single total.,False,,6,168,21,False,5
+TPAA-MD-095,MathDial,test,,10.5,13.5,Uses additive instead of multiplicative reasoning for similar triangles.,False,D3-B01-007,6,191,23,False,5
+TPAA-MD-096,MathDial,val,,466.67,28000,"Uses 60 instead of 3,600 seconds per hour.",False,,6,132,21,False,4
+TPAA-MD-097,MathDial,train,,6,4,Keeps one person's age fixed while the other changes.,False,,6,210,7,False,6
+TPAA-MD-098,MathDial,test,,7,15,"Divides the total by one group's rate, ignoring the second group.",False,,6,185,20,False,5
+TPAA-MD-099,MathDial,train,,44,40,Interprets 'twice as large' additively.,False,,6,194,11,False,8
+TPAA-MD-100,MathDial,train,,13,12,Rounds down when a minimum requirement needs rounding up.,False,,6,217,12,False,7
+TPAA-BR-001,Bridge,train,5.2A.Place Value,0.6,because 58 is bigger than 6,Compares decimals by the number of digits after the point.,False,D1-B01-014,5,26,16,True,0
+TPAA-BR-002,Bridge,val,3.4B.Rounding Whole Numbers (Review) - 2,"4,700","0 so it stays 4,600",Looks at the wrong digit when rounding.,False,D1-B01-003,5,30,18,True,0
+TPAA-BR-003,Bridge,test,4.4G.Dividing with Remainders,14,13,Ignores the remainder when every item must be transported.,False,D1-B01-004,4,29,13,True,0
+TPAA-BR-004,Bridge,train,2.4B.Addition and Subtraction Within 100,15,31,Adds when the story requires subtraction.,False,D2-B01-002,4,27,15,True,0
+TPAA-BR-005,Bridge,train,3.1G.Shapes and Area,24 square units,10 square units,Adds the dimensions of an array instead of multiplying.,False,D3-B01-015,4,28,17,True,0
+TPAA-BR-006,Bridge,train,5.4H.Volume of Composite Rectangular Prisms (Review) - 2,32 cubic units,15 cubes,Adds edge lengths instead of multiplying them.,False,D3-B01-019,4,37,18,True,0
+TPAA-BR-007,Bridge,test,6.8B.Areas of Triangles,30 square centimeters,60,Forgets the one-half factor in the triangle area formula.,False,D3-B01-040,4,22,13,True,0
+TPAA-BR-008,Bridge,train,3.3E.Bar Graphs,10,2,Counts grid lines instead of reading the scale.,False,D4-B01-014,4,35,18,True,0
+TPAA-BR-009,Bridge,train,4.9A.Converting Units of Measure (Review) - 1,"2,350 meters",550,Uses 100 meters per kilometer.,False,D1-B01-020,4,20,6,True,0
+TPAA-BR-010,Bridge,test,5.7A.Metric Conversions and Word Problems,"2,000 milliliters",200,Uses 100 milliliters per liter.,False,,3,16,14,True,0
+TPAA-BR-011,Bridge,train,6.2E.Dividing Fractions,12,3/4,Multiplies instead of dividing by a unit fraction.,False,D1-B01-021,4,22,9,True,0
+TPAA-BR-012,Bridge,train,4.6D.Classifying 2D Figures,Yes,no because a rectangle has 2 long sides,Uses a prototype image instead of the defining properties.,False,,3,27,11,True,0
+TPAA-BR-013,Bridge,train,4.7A.Measuring Angles,obtuse,acute,Confuses acute and obtuse angles.,False,D3-B01-018,4,25,16,True,0
+TPAA-BR-014,Bridge,train,5.4E.Simple Expression,6,60,"Works left to right, ignoring the order of operations.",False,D1-B01-042,5,24,6,True,0
+TPAA-BR-015,Bridge,train,4.2C.Multiplicative Comparisons,24,10,Interprets 'times as many' additively.,False,,4,24,17,True,0
+TPAA-BR-016,Bridge,train,3.5D.Unknown Numbers in Division,7,30,Subtracts the divisor instead of dividing.,False,D2-B01-014,3,19,17,True,0
+TPAA-BR-017,Bridge,train,2.8A.2- and 3-Dimensional Shapes,12,6,Confuses faces with edges.,False,D3-B01-004,3,15,14,True,0
+TPAA-BR-018,Bridge,train,4.5A.Geometric Lines,parallel,perpendicular,Confuses parallel and perpendicular.,False,,4,22,10,True,0
+TPAA-BR-019,Bridge,test,5.3A.Multi-Digit Division with Two-Digit Divisors (Review) - 1,3,2,Underestimates a partial quotient.,False,,3,18,13,True,0
+TPAA-BR-020,Bridge,train,5.3C.Estimate Solutions to Division Problems,about 20,40,Chooses a poor compatible number for the divisor.,False,,5,26,15,True,0
+TPAA-BR-021,Bridge,train,6.4F.Applying Ratios: Speed,72 km per hour,0.014,Divides time by distance.,False,D1-B01-044,3,20,12,True,0
+TPAA-BR-022,Bridge,train,5.4A.Simple Expressions,3x + 2,3(x+2),Distributes the multiplier to a term that occurs only once.,False,D2-B01-037,4,24,10,True,0
+TPAA-BR-023,Bridge,train,4.1G.Prime and Composite Numbers (Review) - 1,23,all of them because they are odd,Believes all odd numbers are prime.,False,,3,24,18,True,0
+TPAA-BR-024,Bridge,test,4.4A.Subtracting Multi-Digit Numbers (Review) - 1,"3,756","4,244",Subtracts the smaller digit from the larger in each column.,False,,4,19,18,True,0
+TPAA-BR-025,Bridge,train,5.2C.Rounding Decimal Numbers,3.5,3.4,Truncates instead of rounding.,False,,3,16,13,True,0
+TPAA-BR-026,Bridge,train,2.9A.Measuring Length,6 inches,7 inches,Reads the end mark when the object does not start at zero.,False,,4,29,18,True,0
+TPAA-BR-027,Bridge,train,5.7A.Line Plots with Fractions (Review) - 2,3/4 inch,3/12,Adds denominators when adding fractions.,False,,4,31,12,True,0
+TPAA-BR-028,Bridge,val,5.3L.Word Problems with Fractions (Review) - 1,12/20,3/20,Scales the denominator but not the numerator.,False,D1-B01-017,3,22,22,True,0
+TPAA-BR-029,Bridge,train,3.6B.Quadrilaterals (Review) - 1,4,3,Does not connect 'quadrilateral' to four sides.,False,,3,16,10,True,0
+TPAA-BR-030,Bridge,test,4.3E.Dividing Using Equations,4,18,Subtracts the divisor once instead of dividing.,False,D1-B01-016,4,30,16,True,0
+TPAA-BR-031,Bridge,train,6.8D.Areas by Decomposition,68 square meters,92,Adds a cut-out area instead of subtracting it.,False,D3-B01-006,4,35,14,True,0
+TPAA-BR-032,Bridge,val,3.2B.Multiples of Ten,310,670,Adds tens as if they were hundreds.,False,,3,15,8,True,0
+TPAA-BR-033,Bridge,val,5.1A.Multiplying Whole Numbers,230,23,Treats multiplying by 10 as multiplying by 1.,False,,4,22,13,True,0
+TPAA-BR-034,Bridge,train,3.4A.Two-Step Word Problems,75,58,Adds all the numbers in the problem.,False,,4,26,9,True,0
+TPAA-BR-035,Bridge,train,4.4A.Addition and Subtraction Word Problems,2,12,Adds when a comparison (difference) is asked.,False,D4-B01-039,3,21,15,True,0
+TPAA-BR-036,Bridge,train,2.9A.Length Problems (Review) - 1,27 cm,37,Regrouping error in two-digit subtraction.,False,,4,22,10,True,0
+TPAA-BR-037,Bridge,train,4.9A.Converting Units of Measure (Review) - 2,41 inches,35,Concatenates feet and inches as digits.,False,,3,19,13,True,0
+TPAA-BR-038,Bridge,train,4.1A.Converting Units of Measure (Review) - 1,3:35,2:95,Adds minutes past 60 without regrouping into hours.,False,D3-B01-002,4,18,22,True,0
+TPAA-BR-039,Bridge,test,5.2A.Place Value,36/100 = 9/25,36/10,Uses the wrong place-value denominator.,False,D1-B01-038,3,12,10,True,0
+TPAA-BR-040,Bridge,train,4.2A.Place Value,"7,000",7,Gives the digit instead of its place value.,False,,3,16,15,True,0
+TPAA-BR-041,Bridge,val,6.2E.Dividing Fractions Word Problems (Review) - 1,8,4.5,Multiplies by the fraction instead of dividing.,False,,4,23,14,True,0
+TPAA-BR-042,Bridge,train,5.3C.Multi-Digit Division with Two-Digit Divisors (Review) - 2,3,7,Repeats the partial quotient instead of computing the remainder.,False,,4,28,15,True,0
+TPAA-BR-043,Bridge,test,4.6D.Classifying 2D Figures,right,acute because it has 2 acute angles,Classifies a triangle by its majority of angles.,False,,3,26,13,True,0
+TPAA-BR-044,Bridge,train,3.4B.Rounding Whole Numbers (Review) - 2,400,300 because 3 is the hundreds,Keeps the hundreds digit regardless of the tens digit.,False,,2,15,13,True,0
+TPAA-BR-045,Bridge,test,5.4E.Simple Expression,30,45,Ignores parentheses.,False,D2-B01-016,3,15,10,True,0
+TPAA-BR-046,Bridge,test,2.4B.Addition and Subtraction Within 100,35,45,Reverses digits instead of regrouping.,False,,5,29,16,True,0
+TPAA-BR-047,Bridge,train,4.4G.Dividing with Remainders,701,71,Omits a zero in the quotient.,False,D1-B01-005,6,42,16,True,0
+TPAA-BR-048,Bridge,train,5.3A.Multi-Digit Division with Two-Digit Divisors (Review) - 1,300,35,Adds instead of multiplying.,False,,3,12,19,True,0
+TPAA-BR-049,Bridge,train,3.5D.Unknown Numbers in Division,36,2 because 9 divided by 4 is about 2,Divides the given numbers instead of using the inverse operation.,False,,3,21,17,True,0
+TPAA-BR-050,Bridge,train,6.4F.Applying Ratios: Speed,150 miles,24,Divides distance by time when distance is asked.,False,,3,19,17,True,0
