@@ -156,10 +156,35 @@ def main() -> None:
                                        "where the model allows (e.g. Gemini 2.5 Flash)")
     ap.add_argument("--sleep", type=float, default=0.0, help="seconds between calls (free-tier RPM)")
     ap.add_argument("--limit", type=int, default=None)
+    ap.add_argument("--retry-errors", action="store_true",
+                    help="call again the rows of this alias/method whose qa_status is 'error' "
+                         "(old rows are moved to <out>_qa_errors_archive.csv)")
+    ap.add_argument("--max-cost", type=float, default=None,
+                    help="stop this run once the billed cost (cost_usd, OpenRouter) exceeds this many USD")
     args = ap.parse_args()
 
     data = json.loads(Path(args.dataset).read_text(encoding="utf-8"))
     out = Path(args.out)
+    out.parent.mkdir(parents=True, exist_ok=True)
+    if args.retry_errors and out.exists():
+        with open(out, newline="", encoding="utf-8") as f:
+            reader = csv.DictReader(f)
+            header, rows = reader.fieldnames, list(reader)
+        bad = [r for r in rows if r.get("qa_status") == "error"
+               and r["model_alias"] == args.alias and r["method"] == args.method]
+        if bad:
+            archive = out.with_name(out.stem + "_qa_errors_archive.csv")
+            with open(archive, "a", newline="", encoding="utf-8") as f:
+                w = csv.DictWriter(f, fieldnames=header)
+                if f.tell() == 0:
+                    w.writeheader()
+                w.writerows(bad)
+            keep = [r for r in rows if r not in bad]
+            with open(out, "w", newline="", encoding="utf-8") as f:
+                w = csv.DictWriter(f, fieldnames=header)
+                w.writeheader()
+                w.writerows(keep)
+            print(f"Moved {len(bad)} QA-error rows of {args.alias} to {archive.name}; they will be called again.")
     done = set()
     if out.exists():
         with open(out, newline="", encoding="utf-8") as f:
@@ -175,16 +200,41 @@ def main() -> None:
     if args.limit:
         todo = todo[: args.limit]
     print(f"{len(done)} rows already in {out.name}; {len(todo)} to call.")
+    spent = 0.0
     for n, d in enumerate(todo, 1):
         system, user = build_prompt(d)
-        for attempt in range(5):
+        for attempt in range(12):
             try:
                 t0 = time.time()
                 text, usage = call(system, user)
                 break
             except Exception as e:  # rate limit / transient error -> back off
-                wait = min(60, 5 * 2 ** attempt)
-                print(f"  {d['conversation_id']}: {type(e).__name__}: {str(e)[:120]} -> retry in {wait}s")
+                status = getattr(e, "status_code", None) or getattr(getattr(e, "response", None), "status_code", None)
+                if status in (400, 401, 402, 403, 404) or type(e).__name__ in (
+                    "NotFoundError", "AuthenticationError", "PermissionDeniedError", "BadRequestError"
+                ):
+                    raise SystemExit(
+                        f"Stopped: {type(e).__name__} (HTTP {status}) - this will not fix itself by retrying.\n"
+                        f"  {str(e)[:300]}\n"
+                        "  404 = model id not served (check openrouter.ai/models); 401 = wrong API key; "
+                        "402 = out of credits. Nothing was written for this call."
+                    )
+                if status == 429 or type(e).__name__ == "RateLimitError":
+                    # rate limited: honour Retry-After if given, otherwise wait longer each time,
+                    # and slow down every later call in this run so we stop hitting the limit
+                    retry_after = None
+                    try:
+                        retry_after = float(e.response.headers.get("retry-after"))
+                    except Exception:
+                        pass
+                    wait = retry_after if retry_after else min(90, 20 * (attempt + 1))
+                    old_sleep = args.sleep
+                    args.sleep = min(15.0, max(args.sleep * 1.5, args.sleep + 2, 3.0))
+                    print(f"  {d['conversation_id']}: rate limited (429) -> wait {wait:.0f}s; "
+                          f"pause between calls {old_sleep:g}s -> {args.sleep:g}s")
+                else:
+                    wait = min(60, 5 * 2 ** attempt)
+                    print(f"  {d['conversation_id']}: {type(e).__name__}: {str(e)[:120]} -> retry in {wait}s")
                 time.sleep(wait)
         else:
             print(f"  giving up on {d['conversation_id']} for now; rerun later to resume")
@@ -213,6 +263,13 @@ def main() -> None:
         if n % 10 == 0 or n == len(todo):
             spent = row.get("cost_usd")
             print(f"{n}/{len(todo)} done; last cost {spent}; last: {row['response'][:80]}")
+        try:
+            spent += float(row.get("cost_usd") or 0)
+        except (TypeError, ValueError):
+            pass
+        if args.max_cost is not None and spent > args.max_cost:
+            print(f"Stopping: this run has cost ${spent:.4f} > --max-cost {args.max_cost}. Rerun to resume.")
+            break
         time.sleep(args.sleep)
 
 

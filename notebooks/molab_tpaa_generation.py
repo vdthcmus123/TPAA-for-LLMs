@@ -401,7 +401,7 @@ def _(mo):
         _re.IGNORECASE,
     )
     REASONING_RE = _re.compile(
-        r"^\s*(reasoning|analysis|thought process|step \d+|let'?s think)\b|\n\s*(reasoning|analysis)\s*:",
+        r"^\s*(reasoning|analysis|thought process)\b|^\s*step \d+\s*:|\n\s*(reasoning|analysis)\s*:",
         _re.IGNORECASE,
     )
     SPECIAL_RE = _re.compile(r"<\|[^>]*\|>|</?think>|\[/?INST\]|</?s>")
@@ -412,6 +412,26 @@ def _(mo):
         _re.IGNORECASE,
     )
     MARKDOWN_RE = _re.compile(r"\*\*|__|`|^\s*#+\s*|^\s*[-*•]\s+", _re.MULTILINE)
+    ITALIC_RE = _re.compile(r"(?<![\w*])\*(?=\S)([^*\n]+?)(?<=\S)\*(?![\w*])")
+
+
+    PREAMBLE_RE = _re.compile(
+        r"^\s*(?:the )?student\b|^\s*the correct answer is\b|"
+        r"\b(?:a|the) (?:tutor'?s? )?response should\b|\bthe tutor should\b",
+        _re.IGNORECASE,
+    )
+
+
+    def drop_preamble(text):
+        """Model wrote an analysis paragraph first and the real tutor turn after it
+        (labelled "Tutor:" or in quotes): keep the tutor turn, drop the analysis."""
+        paras = [p for p in _re.split(r"\n\s*\n", text.strip()) if p.strip()]
+        if len(paras) < 2 or not (PREAMBLE_RE.search(paras[0]) or META_RE.search(paras[0])):
+            return text, False
+        nxt = paras[1].strip()
+        if LEADING_TAG_RE.match(nxt) or nxt[:1] in "\"“":
+            return "\n\n".join(paras[1:]), True
+        return text, False
 
 
     def find_new_turn(text):
@@ -434,6 +454,9 @@ def _(mo):
             actions.append("removed_special_tokens")
             text = stripped
         text = text.strip()
+        text, _dropped = drop_preamble(text)
+        if _dropped:
+            actions.append("dropped_preamble")
         new = LEADING_TAG_RE.sub("", text, count=1)
         if new != text:
             actions.append("stripped_leading_role_tag")
@@ -446,7 +469,7 @@ def _(mo):
         if len(parts) > 1 and parts[1].strip():
             text = parts[0]
             actions.append("cut_after_first_paragraph")
-        new = MARKDOWN_RE.sub("", text)
+        new = ITALIC_RE.sub(r"\1", MARKDOWN_RE.sub("", text)).replace("\\*", "*")
         if new != text:
             actions.append("removed_markdown")
             text = new
@@ -476,6 +499,8 @@ def _(mo):
             errors.append("special_tokens_left")
         if LEADING_TAG_RE.match(t) or find_new_turn(t) >= 0:
             errors.append("role_tag_left")
+        if _re.match(r"^\s*(?:\*\*)?\s*Student(?:'s)?\b[^:\n]{0,30}:", t, _re.IGNORECASE):
+            errors.append("response_is_student_turn")
         if "**" in t or "\n" in t:
             errors.append("formatting_left")
         if REASONING_RE.search(t) or (method == "cot" and META_RE.search(t)):
@@ -484,8 +509,14 @@ def _(mo):
             info.append("third_person_meta_comment")
         if t and t[-1] not in ".?!\"”)'":
             (errors if hit_max_tokens else info).append("no_sentence_end")
-        if _re.search(r"(?:\b\d+\s*,\s*){12,}", t) or _re.search(r"(\b\w+\b(?:\W+\w+){0,3})(?:\W+\1\b){5,}", t, _re.I):
+        number_run = _re.search(r"(?:\b\d+\s*,\s*){12,}", t)
+        long_number_run = _re.search(r"(?:\b\d+\s*,\s*){30,}", t)
+        if long_number_run or (number_run and hit_max_tokens) or _re.search(
+            r"(\b\w+\b(?:\W+\w+){0,3})(?:\W+\1\b){5,}", t, _re.I
+        ):
             errors.append("degenerate_repetition")
+        elif number_run:
+            info.append("long_number_list")
         if method == "cot":
             if not reasoning_closed:
                 errors.append("cot_reasoning_not_closed")
