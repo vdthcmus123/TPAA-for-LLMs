@@ -98,7 +98,7 @@ Khác biệt còn lại: ngữ cảnh kiểu MathDial ngắn hơn khoảng 25%. 
 
 1. **Sinh response.**
    - **Model mở trên moLab:** dùng `notebooks/molab_tpaa_generation.py` (bản v3). Notebook chạy Llama 3.1 8B, Phi-3 Mini, Mistral 7B và Qwen3.5 9B (Zero-shot + CoT có suy luận thật, ngân sách suy luận `MAX_NEW_TOKENS_COT = 1024` token; hết ngân sách thì chốt `</think>` rồi trả lời), tổng cộng 750 response. Nếu chạy tiếp từ một lần chạy cũ, các dòng sinh theo cấu hình cũ tự được chuyển sang `*_superseded.csv` và sinh lại. Tải `tpaa_mrbench_v1.json` vào ô upload; notebook tự kiểm tra SHA-256. Chỉ tải ZIP khi bảng QA báo ✅. Kết quả đã chạy xong (03/11/2026, 750/750 response, 0 lỗi QA) nằm ở `generations/open_models/`: `tpaa_open_model_responses_v2.csv` (`response` là bản sạch, `response_raw` là bản gốc), `qa_report.csv` và `MANIFEST.json`.
-   - **Model API qua OpenRouter:** dùng `scripts/run_api_tutors.py --provider openrouter`, mỗi model một lệnh (Gemini 2.5 Flash, Claude Sonnet 5.5, GPT-4o, Llama-3.1-405B). Script ghi chi phí thực tế vào cột `cost_usd` và dùng chung bộ làm sạch/QA (`scripts/tutor_cleaning.py`) với notebook. Ghi kết quả vào `generations/api_responses.csv`.
+   - **Model API qua OpenRouter:** dùng `scripts/run_api_tutors.py --provider openrouter`, mỗi model một lệnh (Gemini 2.5 Flash, Llama 3.3 70B, GPT-4o, Claude Sonnet 5.5; Llama-3.1-405B đã ngừng phục vụ trên OpenRouter nên thay bằng Llama 3.3 70B). Đã chạy xong 08/11/2026: 600/600 response, 0 lỗi QA, tổng chi phí $0,417. Script ghi chi phí thực tế vào cột `cost_usd` và dùng chung bộ làm sạch/QA (`scripts/tutor_cleaning.py`) với notebook. Ghi kết quả vào `generations/api_responses.csv`.
 2. **Ghép response vào dataset.**
 
    ```bash
@@ -110,6 +110,24 @@ Khác biệt còn lại: ngữ cảnh kiểu MathDial ngắn hơn khoảng 25%. 
    ```
 
    File API chỉ cần các cột `conversation_id`, `tutor` (hoặc `model_alias` + `method`) và `response`. Dòng có `qa_status = error` bị bỏ qua và in ra danh sách, trừ khi thêm `--allow-qa-errors`.
+
+   Kết quả: 150 hội thoại, 1.550 response. Tên tutor trong file gộp theo quy ước MRBench (viết liền, số phiên bản ghép liền):
+
+   | Key trong dataset | Model | Alias lúc sinh | Số response |
+   |---|---|---|---|
+   | `Expert` | Nhóm soạn | | 150 |
+   | `Novice` | Nhóm soạn (chỉ Bridge, như gốc) | | 50 |
+   | `Llama318B` | Llama 3.1 8B Instruct | `llama31_8b` | 150 |
+   | `Phi3` | Phi-3 Mini | `phi3_mini` | 150 |
+   | `Mistral` | Mistral 7B Instruct | `mistral_7b` | 150 |
+   | `Qwen359B` | Qwen3.5 9B, prompt Figure 2 | `qwen35_9b` + `zero_shot` | 150 |
+   | `Qwen359BCoT` | Qwen3.5 9B, có suy luận (CoT) | `qwen35_9b` + `cot` | 150 |
+   | `Gemini` | Gemini 2.5 Flash | `Gemini` | 150 |
+   | `Llama3370B` | Llama 3.3 70B Instruct | `Llama3370B` | 150 |
+   | `GPT4o` | GPT-4o (2024-11-20) | `GPT4o` | 150 |
+   | `Sonnet` | Claude Sonnet 5.5 | `Sonnet` | 150 |
+
+   `GPT4o` giữ chữ "o" vì `GPT4` của MRBench là model khác. Bảng đổi tên nằm ở `TUTOR_KEYS` trong `scripts/merge_llm_responses.py`; các file trong `generations/` giữ alias lúc sinh.
 3. **Gán 8 nhãn** trên `annotation_sheet_with_llm.csv`. Dùng đúng tập nhãn của paper:
 
    | Chiều | Nhãn |

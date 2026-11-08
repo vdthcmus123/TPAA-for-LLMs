@@ -26,6 +26,17 @@ from pathlib import Path
 DIMS = ["Mistake_Identification", "Mistake_Location", "Revealing_of_the_Answer",
         "Providing_Guidance", "Actionability", "humanlikeness", "Coherence", "Tutor_Tone"]
 
+# Generation aliases -> tutor keys in MRBench style (CamelCase, version digits run together:
+# MRBench uses Llama318B, Llama31405B, Phi3, Mistral, GPT4, Gemini, Sonnet).
+# GPT4o keeps the "o": MRBench's GPT4 was a different model, so the key should not imply the same one.
+TUTOR_KEYS = {
+    "llama31_8b": "Llama318B",
+    "phi3_mini": "Phi3",
+    "mistral_7b": "Mistral",
+    "qwen35_9b_zero_shot": "Qwen359B",
+    "qwen35_9b_cot": "Qwen359BCoT",
+}
+
 
 def main() -> None:
     ap = argparse.ArgumentParser()
@@ -61,6 +72,7 @@ def main() -> None:
             continue
         base = r.get("tutor") or r["model_alias"]
         key = base if len(methods[base]) <= 1 else f"{base}_{r.get('method', '')}"
+        key = TUTOR_KEYS.get(key, key)
         text = (r.get("response") or "").strip()
         if not text:
             empty += 1
