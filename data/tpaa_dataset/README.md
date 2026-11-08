@@ -8,7 +8,7 @@ Bộ dữ liệu mới của nhóm cho mục 4 của đồ án. Bộ này **thay
 |---|---:|---:|---:|
 | Hội thoại (`conversation_id`) | 100 (`TPAA-MD-001…100`) | 50 (`TPAA-BR-001…050`) | **150** |
 | Response có sẵn | Expert | Expert + Novice | 200 |
-| Response sau khi thêm 7 LLM tutor | 8/hội thoại | 9/hội thoại | **1.250** |
+| Response sau khi thêm 9 LLM tutor | 10/hội thoại (1.000) | 11/hội thoại (550) | **1.550** |
 | Split (train/val/test) | 70/10/20 | 35/5/10 | 105/15/30 |
 
 Tỉ lệ MathDial : Bridge ≈ 2 : 1, gần với paper (132 : 60).
@@ -19,7 +19,9 @@ Tỉ lệ MathDial : Bridge ≈ 2 : 1, gần với paper (132 : 60).
 |---|---|
 | `tpaa_mrbench_v1.json` | Dataset chính. Cùng key và thứ tự key với MRBench V1: `conversation_id`, `conversation_history`, `Data`, `Split`, `Topic`, `Ground_Truth_Solution`, `anno_llm_responses{tutor:{response, annotation{8 chiều}}}` |
 | `tpaa_metadata_v1.csv` | Thông tin truy vết mỗi hội thoại: đáp án đúng, đáp án sai của học sinh, loại lỗi (misconception), bản nháp gốc nếu có, số lượt, số từ |
-| `annotation_sheet_v1.csv` | Mỗi dòng là một response cần gán 8 nhãn, có cột cho annotator 1 và 2 cùng người phân xử |
+| `tpaa_mrbench_v1_with_llm.json` | Bản đầy đủ: dataset chính + 9 LLM tutor, tổng 1.550 response, nhãn để trống. **Đây là bản dùng để gán nhãn và đánh giá.** |
+| `annotation_sheet_with_llm.csv` | Bảng gán nhãn: mỗi dòng là một response (1.550 dòng), có cột 8 nhãn, `annotator_1`, `annotator_2`, `adjudicator`, `notes` |
+| `generations/` | Response LLM gốc trước khi ghép: `open_models/` (moLab, 750) và `api_responses.csv` (OpenRouter, 600), có cả `response_raw` và kết quả QA |
 | `overlap_audit_v1.csv` | Láng giềng gần nhất trong MRBench V1 và trong chính bộ này (TF-IDF n-gram ký tự) |
 | `quality_summary_v1.json` | Kết quả mọi kiểm tra và thống kê so với MRBench |
 | `draft_disposition_v0.3.csv` | Xử lý từng mẫu trong 184 mẫu nháp cũ (viết lại hay loại bỏ, kèm lý do) |
@@ -94,10 +96,12 @@ Khác biệt còn lại: ngữ cảnh kiểu MathDial ngắn hơn khoảng 25%. 
   2. Ghi tên người duyệt vào metadata.
   3. Ghi rõ trong báo cáo phần nào AI soạn, phần nào người duyệt hoặc viết.
 
-## Bước tiếp theo
+## Quy trình sinh response và gán nhãn
+
+Bước 1–2 đã xong (08/11/2026). Kế hoạch gán nhãn và các mục còn lại xem ở [README gốc, phần Các bước tiếp theo](../../README.md#các-bước-tiếp-theo).
 
 1. **Sinh response.**
-   - **Model mở trên moLab:** dùng `notebooks/molab_tpaa_generation.py` (bản v3). Notebook chạy Llama 3.1 8B, Phi-3 Mini, Mistral 7B và Qwen3.5 9B (Zero-shot + CoT có suy luận thật, ngân sách suy luận `MAX_NEW_TOKENS_COT = 1024` token; hết ngân sách thì chốt `</think>` rồi trả lời), tổng cộng 750 response. Nếu chạy tiếp từ một lần chạy cũ, các dòng sinh theo cấu hình cũ tự được chuyển sang `*_superseded.csv` và sinh lại. Tải `tpaa_mrbench_v1.json` vào ô upload; notebook tự kiểm tra SHA-256. Chỉ tải ZIP khi bảng QA báo ✅. Kết quả đã chạy xong (03/11/2026, 750/750 response, 0 lỗi QA) nằm ở `generations/open_models/`: `tpaa_open_model_responses_v2.csv` (`response` là bản sạch, `response_raw` là bản gốc), `qa_report.csv` và `MANIFEST.json`.
+   - **Model mở trên moLab:** dùng `notebooks/molab_tpaa_generation.py` (bản v3). Notebook chạy Llama 3.1 8B, Phi-3 Mini, Mistral 7B và Qwen3.5 9B (Zero-shot + CoT có suy luận thật, ngân sách suy luận `MAX_NEW_TOKENS_COT = 1024` token; hết ngân sách thì chốt `</think>` rồi trả lời), tổng cộng 750 response. Nếu chạy tiếp từ một lần chạy cũ, các dòng sinh theo cấu hình cũ tự được chuyển sang `*_superseded.csv` và sinh lại. Tải `tpaa_mrbench_v1.json` vào ô upload; notebook tự kiểm tra SHA-256. Chỉ tải ZIP khi bảng QA báo ✅. Kết quả đã chạy xong (03/11/2026, 750/750 response, 0 lỗi QA) nằm ở `generations/open_models/`: `tpaa_open_model_responses_v2.csv` (`response` là bản sạch, `response_raw` là bản gốc), `qa_report.csv` và `MANIFEST.json` (bản sao `tpaa_mrbench_v1.json` trong ZIP đã bỏ vì trùng với file chính).
    - **Model API qua OpenRouter:** dùng `scripts/run_api_tutors.py --provider openrouter`, mỗi model một lệnh (Gemini 2.5 Flash, Llama 3.3 70B, GPT-4o, Claude Sonnet 5.5; Llama-3.1-405B đã ngừng phục vụ trên OpenRouter nên thay bằng Llama 3.3 70B). Đã chạy xong 08/11/2026: 600/600 response, 0 lỗi QA, tổng chi phí $0,417. Script ghi chi phí thực tế vào cột `cost_usd` và dùng chung bộ làm sạch/QA (`scripts/tutor_cleaning.py`) với notebook. Ghi kết quả vào `generations/api_responses.csv`.
 2. **Ghép response vào dataset.**
 

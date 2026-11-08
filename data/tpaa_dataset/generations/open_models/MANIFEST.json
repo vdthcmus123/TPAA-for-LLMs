@@ -9,11 +9,6 @@
       "sha256": "fb25fe70493ba62c9f55041d5e050ab279ad1eec296965f183dc37da2b20b072"
     },
     {
-      "name": "tpaa_mrbench_v1.json",
-      "size_bytes": 219501,
-      "sha256": "bd818191f8b38342b3a2b84c6e2180c1677ab48277813fec28b38ac6dd33aafa"
-    },
-    {
       "name": "tpaa_open_model_responses_v2.csv",
       "size_bytes": 1643666,
       "sha256": "562da9a846d23a28a6b382c8a2243bbaecfb9727328b3cf703647d9c047bfed0"
@@ -24,6 +19,10 @@
       "date": "2026-11-08",
       "change": "stripped *word* italic markers from response (ITALIC_RE in scripts/tutor_cleaning.py); cleaning_actions += removed_markdown; unescaped markdown \\* -> *",
       "backup": "_to_delete/italics_backup_20261108/"
+    },
+    {
+      "date": "2026-11-08",
+      "change": "removed the bundled copy of tpaa_mrbench_v1.json (identical to data/tpaa_dataset/tpaa_mrbench_v1.json, sha256 bd818191...)"
     }
   ]
 }
