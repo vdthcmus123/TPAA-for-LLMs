@@ -34,7 +34,6 @@ TPAA v1 gồm 150 hội thoại: 100 kiểu MathDial và 50 kiểu Bridge, chia 
 | **Tổng** | | **1.550** | |
 
 - Tất cả response LLM đều qua bộ làm sạch và QA chung (`scripts/tutor_cleaning.py`). Kết quả 0 lỗi.
-- Chi phí API: $0,42.
 - Llama-3.1-405B mà paper dùng đã ngừng phục vụ trên OpenRouter, nên nhóm thay bằng Llama 3.3 70B.
 
 ## Cấu trúc repo
